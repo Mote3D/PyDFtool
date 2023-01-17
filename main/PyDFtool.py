@@ -75,8 +75,8 @@ def compare_content(pdictlist):
 
 def main():
 
-    filename1 = '1.pdf'
-    filename2 = '2.pdf'
+    filename1 = 'A.pdf'
+    filename2 = 'B.pdf'
 
 
     # Read element variable output from .dat file:
