@@ -47,14 +47,14 @@ def parse_file(fname):
 
     if plist:
         ptext.update({'header': fcontent[0:plist[0]]})
-        if len(plist) > 1:
+        if len(plist) >= 1:
             if int(f['metadata']['xmpTPg:NPages']) == len(plist):
                 pcounter = 1
                 for i in range(1, len(plist), 1):
                     print(i)
                     ptext.update({'page'+str(pcounter): fcontent[plist[i-1]:plist[i]]})
                     pcounter += 1
-                ptext.update({'page'+str(pcounter): fcontent[plist[i]:]})
+                ptext.update({'page'+str(pcounter): fcontent[plist[-1]:]})
             else:
                 print("\nError reading file {}.\n".format(fname))
                 sys.exit()
