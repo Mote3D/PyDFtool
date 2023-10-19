@@ -2,7 +2,7 @@
 
 #### Description
 
-Parser for .pdf files
+Simple parser for .pdf files that uses the Apache&#8482; Tika toolkit as sole dependency.
 
 #### License
 
